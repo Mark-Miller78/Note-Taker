@@ -47,7 +47,7 @@ const getNotes = () =>
 
 
 
-const saveNote = (note) =>{
+const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
     headers: {
@@ -66,7 +66,7 @@ const saveNote = (note) =>{
     console.log(postResponse);
     alert('Your note has been added!');
   });
-}
+
   
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
