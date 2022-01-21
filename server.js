@@ -9,6 +9,7 @@ const notes = require('./db/db.json');
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(express.static('public'));
 
 function findById(id, notesArr) {
     const result = notesArr.filter(notes => notes.id === id)[0];
@@ -64,7 +65,9 @@ app.post('/api/notes', (req, res)=>{
     }
 });
 
-
+app.get('/', (req, res)=>{
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
 
 
 app.listen(PORT, ()=>{
