@@ -19,7 +19,7 @@ Notable is an application that allows the user to keep their notes clean and org
 
 ## Usage
 
-This application is meant to be used in a way that helps keeps your busy life more managable. New notes are easily added and persist so, whenever you decide to revisit the page, you can pick up right where you left off. The delete button also makes it quick and easy to delete old notes which are no longer needed, giving you the ability to keep your notes organized any way you see fit. 
+This application is meant to be used in a way that helps keeps your busy life more managable. New notes are easily added and persist so, whenever you decide to revisit the page, you can pick up right where you left off. The delete button also makes it quick and easy to delete old notes which are no longer needed, giving you the ability to keep your notes organized any way you see fit. Feel free to see it live by clicking [Here](https://boiling-everglades-66556.herokuapp.com/)! 
 
 ## License
 
