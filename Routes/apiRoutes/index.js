@@ -1,15 +1,20 @@
+// initializes use of router
 const router =require('express').Router();
+//sets use of uuid
 const {v4: uuidv4} = require('uuid');
+//links to required functions
 const {createNewNote, validateNote, deleteNote} = require('../../lib/notes');
+//links to note database
 const notes = require('../../db/db.json');
 
-
+//retrieves notes in database
 router.get('/notes', (req, res)=>{
     res.json(notes);
 });
 
+//saves new notes to database
 router.post('/notes', (req, res)=>{
-    //set id based off length of notes array
+    //each note gets a unique id 
     req.body.id = uuidv4();
 
     //if any data in req.body is incorrect send 400 error back
@@ -22,6 +27,7 @@ router.post('/notes', (req, res)=>{
     }
 });
 
+//deletes selected note
 router.delete('/notes/:id', (req, res)=>{
     const id = req.params.id.toString();
     deleteNote(id, notes);
